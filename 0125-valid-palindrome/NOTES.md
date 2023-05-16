@@ -1,0 +1,1 @@
+To remove non-alphanumeric values ->    // except the pattern "[^a-zA-Z0-9]"
