@@ -14,22 +14,18 @@ public class Solution {
         
         ListNode T = head;
         
-        ListNode H = T;
+        ListNode H = head;
         
-        while(H != null && T != null){
-            
-
-            if(H.next == null || T.next == null){
-                return false;
-            }
-                        T = T.next;
+        while(H != null && H.next != null){
+            T = T.next;
             H = H.next.next;
             
-            if (H == T){
+            if (T == H){
                 return true;
             }
         }
         
         return false;
+
     }
 }
