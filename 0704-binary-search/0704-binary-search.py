@@ -9,7 +9,7 @@ class Solution:
         
         while R >= L :
             
-            M = (R + L) // 2
+            M = L + (R-L) // 2  # (l + r) // 2 can lead to overflow
             
             if target > nums[M]:
                 L = M +1
