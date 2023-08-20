@@ -1,23 +1,19 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         
-        if not nums:
-            return nums
+        start, end = 0, len(nums) -1
         
-        L = 0
-        R = len(nums) -1
-        
-        while R >= L :
+        while start <= end :
             
-            M = L + (R-L) // 2  # (l + r) // 2 can lead to overflow
+            mid = (end - start)// 2  + start
             
-            if target > nums[M]:
-                L = M +1
-            else:
-                R = M -1
+            if target == nums[mid]:
+                return mid
                 
-            if target == nums[M]:
-                return M
-            
+            elif target < nums[mid]:
+                end = mid -1
+            else:
+                start = mid +1
+        
         return -1
-            
+        
