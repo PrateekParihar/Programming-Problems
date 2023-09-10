@@ -19,7 +19,6 @@ class Solution:
         
         """
         dummy = ListNode()
-        
         dummy.next = head
         
         p1 = dummy
@@ -31,10 +30,8 @@ class Solution:
             p2=p2.next
             p1=p1.next
         
-        if not p1.next:
-            return None
-        else:
-            p1.next= p1.next.next
 
-            return dummy.next
+        p1.next= p1.next.next
+
+        return dummy.next
             
